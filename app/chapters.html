@@ -45,7 +45,7 @@ permalink: chapters/
             {% assign posts = site.livro | where: "capitulo",postChapt.capitulo  %}
             {% for post in posts %}
               <div class="bb-item">
-                <div class="bb-custom-side page-layout-1">
+                <div class="bb-custom-side ">
                   <div class="chapter-nav">
                     <span>{{postChapt.capitulo}}</span>
                       {% assign prevPg = null %}
@@ -59,8 +59,8 @@ permalink: chapters/
                       </ul>
                   </div>
                 </div>
-                <div class="bb-custom-side page-layout-1 {{post.pagelayout}}">
-                  <h3>{{post.title}}</h3>
+                <div class="bb-custom-side {{post.pagelayout}}">
+                  <h1>{{post.title}}</h1>
                   {{post.content | markdownify}}
                 </div>
               </div>
