@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * bookshelf.js v1.0.0
  * http://www.codrops.com
@@ -90,7 +91,9 @@
 
 	Book.prototype._open = function() {
 		docscroll = scrollY();
-		
+
+		classie.remove( this.el, 'close' );
+		classie.remove( this.bbWrapper, 'hide' );
 		classie.add( this.el, 'open' );
 		classie.add( this.bbWrapper, 'show' );
 
