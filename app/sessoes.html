@@ -50,12 +50,16 @@ permalink: sessoes/
                   <div class="chapter-nav">
                     <span>{{postChapt.capitulo}}</span>
                       {% assign prevPg = null %}
+                      {% assign navPage = 1 %}
                       <ol>
                       {% for postNav in posts %}
                         {% unless prevPg == postNav.pagina %}
-                          <li class="{% if post.pagina == postNav.pagina %}active{% endif %}">{{postNav.pagina}}</li>
+                          <li class="{% if post.pagina == postNav.pagina %}active{% endif %}">
+                            <a href="#" data-hook="book-nav" data-page="{{navPage}}">{{postNav.pagina}}</a>
+                          </li>
                           {% assign prevPg = postNav.pagina %}
                         {% endunless %}
+                        {% assign navPage = navPage | plus: 1 %}
                       {% endfor %}
                       </ol>
                   </div>
