@@ -33,7 +33,7 @@ body {
     margin: 40px 0 0 0;
     padding: 0 1%;
     max-width: 75%;
-    width: 16%;
+    width: 10%;
     vertical-align: top;
 }
 
@@ -51,7 +51,7 @@ body {
     position: relative;
     margin: 0 auto;
     width: 100%;
-    height: 150px;
+    height: 80px;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
 }
@@ -397,6 +397,11 @@ body {
     font-family: "Cardo", serif;
 }
 
+
+.section-title {
+    text-align: center;
+}
+
 /* Book navigation */
 
 .bb-custom-wrapper > nav a {
@@ -489,6 +494,7 @@ body {
     background: url(../img/cover1.svg);
     background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.svg), #009bdb;
     background: linear-gradient(to right, rgba(0, 0, 0, 0.1) 0%, rgba(211, 211, 211, 0.1) 5%, rgba(255, 255, 255, 0.15) 5%, rgba(255, 255, 255, 0.1) 9%, rgba(0, 0, 0, 0.01) 100%), url(../img/cover1.svg), #009bdb;
+    background-size: cover;
 }
 
 .book[data-book="book-1"] .inner { border-color: #009bdb }
@@ -497,6 +503,34 @@ body {
     background: url(../img/spine1.svg);
     background: -webkit-linear-gradient(left, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/spine1.svg), #009bdb;
     background: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.01) 1%, rgba(0, 0, 0, 0.1) 50%, transparent 100%), url(../img/spine1.svg), #009bdb;
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-1"], .no-js .book[data-book="book-capitulo-1"], .book[data-book="book-capitulo-1"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_1.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-2"], .no-js .book[data-book="book-capitulo-2"], .book[data-book="book-capitulo-2"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_2.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-3"], .no-js .book[data-book="book-capitulo-3"], .book[data-book="book-capitulo-3"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_3.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-1"], .no-js .book[data-book="book-capitulo-1"], .book[data-book="book-capitulo-1"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_1.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-1"], .no-js .book[data-book="book-capitulo-1"], .book[data-book="book-capitulo-1"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_1.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-1"], .no-js .book[data-book="book-capitulo-1"], .book[data-book="book-capitulo-1"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_1.jpg'); 
+}
+
+.no-csstransforms3d .book[data-book="book-capitulo-1"], .no-js .book[data-book="book-capitulo-1"], .book[data-book="book-capitulo-1"] .front {
+    background-image: url('../graphics/chapters/capitulo_1_1.jpg'); 
 }
 
 
@@ -810,13 +844,4 @@ body {
       -webkit-transform: rotateY(90deg);
       transform: rotateY(90deg);
   }
-}
-
-
-
-
-.chapter-nav {
-    position: absolute;
-    top: 50px;
-    right: 0;
 }
