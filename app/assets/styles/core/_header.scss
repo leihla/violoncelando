@@ -32,7 +32,7 @@
 				color: rgba(0,0,0,.8);
 				text-decoration: none;
 			}
-			&:active {
+			&.active {
 				font-weight: bold;
 				border-bottom: 3px solid #375b85;
 			}

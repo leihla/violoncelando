@@ -61,7 +61,7 @@ permalink: sessoes/
                 </div>
                 <div class="bb-custom-side {{post.page-layout}}">
                   <h1>{{post.title}}</h1>
-                    <div class="post-content" {% if post.page-layout != 'intro' %} style="background-image: url('{{site.baseurl}}/assets/graphics/content/{{post.image}}')" {% endif %} >
+                    <div class="post-content" {% if post.page-layout == 'full-width-image' %} style="background-image: url('{{site.baseurl}}/assets/graphics/content/{{post.image}}')" {% endif %} >
                       {{post.content | markdownify}}
                     </div>
                 </div>
