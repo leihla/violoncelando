@@ -1,0 +1,102 @@
+.bb-custom-side {
+	font-family: 'Merriweather', serif;
+	/*color: #71280b;*/
+	color: #974727;
+
+	h1 {
+		font-size: 48px;
+		color: #375b85;
+		padding: 40px 20px 20px 120px;
+	}
+}
+
+.bb-custom-side.intro {
+	background: url('../graphics/content/menina_busto.jpg') 50px bottom no-repeat;
+	background-size: 40%;
+
+	h1 {
+		display: none;
+	}
+
+	.post-content {
+		background: url('../graphics/content/balao_de_fala.png') center center no-repeat;
+		width: 500px;
+		height: 500px;
+		margin: 100px auto 0;
+		padding: 100px;
+		background-size: 100%;
+	}
+
+	p {
+		font-size: 28px;
+		color: #71280b;
+    	text-align: center;
+    	margin: 0 0 20px 0;
+
+    	&:first-of-type  {
+    		margin-top: 60px;
+    	}
+	}
+}
+
+
+.bb-custom-side.intro-flor {
+	background: url('../graphics/content/margarida.jpg') 80% bottom no-repeat;
+	background-size: 40%;
+
+	h1 {
+		display: none;
+	}
+
+	.post-content {
+		background: url('../graphics/content/balao_de_fala.png') center center no-repeat;
+		width: 500px;
+		min-height: 350px;
+		margin: 100px auto 0;
+		padding: 100px;
+		background-size: 100%;
+	}
+
+	p {
+		font-size: 28px;
+		color: #71280b;
+    	text-align: center;
+    	margin: 0 0 20px 0;
+
+    	&:first-of-type  {
+    		margin-top: 60px;
+    	}
+	}
+}
+
+
+.bb-custom-side.two-columns {
+	.post-content {
+		padding: 80px 120px;
+		column-count: 2;
+		column-gap: 100px;
+		break-inside: avoid; 
+	}
+
+	ol {
+		list-style-type: lower-alpha;
+	}
+
+	li {
+		font-size: 28px;
+		margin-bottom: 40px;
+		-webkit-column-break-inside: avoid;
+          page-break-inside: avoid;
+               break-inside: avoid;
+	}
+}
+
+.bb-custom-side.full-width-image {
+	.post-content {
+		padding: 80px 120px;
+		min-height: 500px;
+		background-repeat: no-repeat;
+		background-size: 80%;
+		background-position: center center;
+	}
+}

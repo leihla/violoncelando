@@ -59,9 +59,11 @@ permalink: chapters/
                       </ul>
                   </div>
                 </div>
-                <div class="bb-custom-side {{post.pagelayout}}">
+                <div class="bb-custom-side {{post.page-layout}}">
                   <h1>{{post.title}}</h1>
-                  {{post.content | markdownify}}
+                    <div class="post-content" {% if post.page-layout != 'intro' %} style="background-image: url('{{site.baseurl}}/assets/graphics/content/{{post.image}}')" {% endif %} >
+                      {{post.content | markdownify}}
+                    </div>
                 </div>
               </div>
             {% endfor %}
