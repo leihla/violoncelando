@@ -51,10 +51,10 @@ permalink: sessoes/
                     <span>{{postChapt.capitulo}}</span>
                       {% assign prevPg = null %}
                       <ol>
-                      {% for post_ in posts %}
-                        {% unless prevPg == post_.pagina %}
-                          <li>{{post_.pagina}}</li>
-                          {% assign prevPg = post_.pagina %}
+                      {% for postNav in posts %}
+                        {% unless prevPg == postNav.pagina %}
+                          <li class="{% if post.pagina == postNav.pagina %}active{% endif %}">{{postNav.pagina}}</li>
+                          {% assign prevPg = postNav.pagina %}
                         {% endunless %}
                       {% endfor %}
                       </ol>
