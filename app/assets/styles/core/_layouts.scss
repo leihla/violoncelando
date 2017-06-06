@@ -11,11 +11,12 @@ body {
 	h1 {
 		font-size: 48px;
 		color: #375b85;
-		padding: 40px 20px 20px 120px;
+		padding: 40px 20px 20px 80px;
 	}
 }
 
-.bb-custom-side.intro {
+.bb-custom-side.intro,
+.bb-custom-side.intro-flor {
 	background: url('../graphics/content/menina_busto.jpg') 50px bottom no-repeat;
 	background-size: 40%;
 
@@ -26,10 +27,15 @@ body {
 	.post-content {
 		background: url('../graphics/content/balao_de_fala.png') center center no-repeat;
 		width: 500px;
-		height: 500px;
-		margin: 100px auto 0;
+		height: 380px;
+		margin: 50px auto 0;
 		padding: 100px;
 		background-size: 100%;
+		display: table-cell;
+		vertical-align: center;
+		position: absolute;
+		right: 100px;
+		top: 0px;
 	}
 
 	p {
@@ -39,56 +45,39 @@ body {
     	margin: 0 0 20px 0;
 
     	&:first-of-type  {
-    		margin-top: 60px;
+    		margin-top: 30px;
     	}
 	}
 }
 
 
 .bb-custom-side.intro-flor {
-	background: url('../graphics/content/margarida.jpg') 80% bottom no-repeat;
+	background: url('../graphics/content/margarida.jpg') right bottom no-repeat;
 	background-size: 40%;
 
-	h1 {
-		display: none;
-	}
-
 	.post-content {
-		background: url('../graphics/content/balao_de_fala.png') center center no-repeat;
-		width: 500px;
-		min-height: 350px;
-		margin: 100px auto 0;
-		padding: 100px;
+		background: url('../graphics/content/balao_de_fala_2.png') center center no-repeat;
 		background-size: 100%;
-	}
-
-	p {
-		font-size: 28px;
-		color: #71280b;
-    	text-align: center;
-    	margin: 0 0 20px 0;
-
-    	&:first-of-type  {
-    		margin-top: 60px;
-    	}
+		right: auto;
+		left: 100px;
 	}
 }
 
 
 .bb-custom-side.two-columns {
-	.post-content {
-		padding: 80px 120px;
+/*	.post-content {
+		padding: 40px 80px;
 		column-count: 2;
-		column-gap: 100px;
+		column-gap: 80px;
 		break-inside: avoid; 
-	}
+	}*/
 
 	ol {
 		list-style-type: lower-alpha;
 	}
 
 	li {
-		font-size: 28px;
+		font-size: 22px;
 		margin-bottom: 40px;
 		-webkit-column-break-inside: avoid;
           page-break-inside: avoid;
@@ -96,9 +85,22 @@ body {
 	}
 }
 
+.bb-custom-side.two-columns {
+	.column {
+		width: 60%;
+		float: left;
+		padding: 40px 80px;
+		box-sizing: border-box;
+		&:first-of-type {
+			width: 40%;
+			padding-right: 0;
+		}
+	}
+}
+
 .bb-custom-side.full-width-image {
 	.post-content {
-		padding: 80px 120px;
+		padding: 40px 120px;
 		min-height: 500px;
 		background-repeat: no-repeat;
 		background-size: 80%;
