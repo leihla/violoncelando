@@ -26,7 +26,6 @@ before_install:
 - chmod +x ./.build_scripts/deploy.sh
 
 before_script:
-- yarn run lint
 - yarn test
 
 script:
