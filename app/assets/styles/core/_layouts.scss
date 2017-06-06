@@ -13,6 +13,11 @@ body {
 		color: #375b85;
 		padding: 40px 20px 20px 80px;
 	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
 }
 
 .bb-custom-side.intro,
@@ -64,29 +69,29 @@ body {
 }
 
 
-.bb-custom-side.two-columns {
-
-	ol {
-		list-style-type: lower-alpha;
-	}
+ol.large {
+	list-style-type: lower-alpha;
 
 	li {
 		font-size: 22px;
 		margin-bottom: 40px;
 		-webkit-column-break-inside: avoid;
-          page-break-inside: avoid;
-               break-inside: avoid;
+		page-break-inside: avoid;
+		break-inside: avoid;
 	}
+
 }
+
+
+
 
 .bb-custom-side.two-columns {
 	.column {
-		width: 60%;
+		width: 50%;
 		float: left;
 		padding: 40px 80px;
 		box-sizing: border-box;
 		&:first-of-type {
-			width: 40%;
 			padding-right: 0;
 		}
 	}
@@ -99,5 +104,30 @@ body {
 		background-repeat: no-repeat;
 		background-size: 80%;
 		background-position: center center;
+	}
+}
+
+
+.exercise, .image {
+	.post-content {
+		text-align: center;
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+		margin-bottom: 40px;
+	}
+}
+
+.bb-custom-side.base {
+	.post-content {
+		padding: 40px 120px;
+		min-height: 500px;
+
+		.two-columns {
+			column-count: 2;
+			column-gap: 80px;
+		}
 	}
 }
