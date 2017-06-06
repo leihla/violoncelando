@@ -43,11 +43,16 @@
 		position: relative;
 		padding-left: 36px;
 
+		a {
+			color: #757575;
+			text-decoration: none;
+		}
+
 		&:before {
 			counter-increment: section;                                          
   			content: counters(section,".") " ";
 			position: absolute;
-			top: -5px;
+			top: -6px;
 			left: 0;
 			display: block;
 			width: 32px;
@@ -60,7 +65,7 @@
 			background: url('../graphics/layout/inactivo.png') top left no-repeat;
 			background-size: 32px 32px;
 		}
-		&:first-of-type {
+		&:first-of-type, &.active:first-of-type {
 			&:before {
 				background: url('../graphics/layout/intro.png') top left no-repeat;
 				content: "";
@@ -69,6 +74,7 @@
 		&.active {
 			&:before {
 				background: url('../graphics/layout/activo.png') top left no-repeat;
+				padding: 6px 11px;
 			} 
 		}
 		&.done {
