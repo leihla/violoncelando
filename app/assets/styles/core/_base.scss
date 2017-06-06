@@ -13,6 +13,11 @@
 	}
 }
 
+.large-text {
+	font-size: 22px;
+	margin: 0 0 40px 0;
+}
+
 #book-cover {
 
 	.container-wrapper {
@@ -41,84 +46,3 @@
 	display: none;
 }
 
-
-.chapter-nav {
-	position: absolute;
-    top: 50px;
-    right: 60px;
-    width: 220px;
-
-	span {
-		background: url('../graphics/layout/fita.png') top left no-repeat;
-		color: #fff;
-		font-size: 14px;
-		font-weight: bold;
-		text-shadow: 0px -1px rgba(0,0,0,.4);
-		display: block;
-		height: 120px;
-		width: 100px;
-		text-align: center;
-		padding-top: 100px;
-		margin-top: -50px;
-	}
-	ol {
-		position: relative;
-		counter-reset: section; 
-		list-style-type: none;
-
-		&:before {
-			display: block;
-			content: "";
-			position: absolute;
-			top: 0;
-			left: 50px;
-			height: 94%;
-			width: 5px;
-			background-color: #d6d5d5;
-			border: 2px solid #fff;
-			box-shadow: 0px 2px 2px rgba(0,0,0,.2);
-		}
-	}
-
-	li {
-		color: #757575;
-		margin-bottom: 40px;
-		font-size: 14px;
-		position: relative;
-		padding-left: 36px;
-
-		&:before {
-			counter-increment: section;                                          
-  			content: counters(section,".") " ";
-			position: absolute;
-			top: -5px;
-			left: 0;
-			display: block;
-			width: 32px;
-			height: 32px;
-			padding: 8px 12.5px;
-			font-size: 13px;
-			color: #fff;
-			text-shadow: 0px 1px 1px rgba(0,0,0,.3);
-			font-family: sans-serif;
-			background: url('../graphics/layout/inactivo.png') top left no-repeat;
-			background-size: 32px 32px;
-		}
-		&:first-of-type {
-			&:before {
-				background: url('../graphics/layout/intro.png') top left no-repeat;
-				content: "";
-			} 
-		}
-		&.active {
-			&:before {
-				background: url('../graphics/layout/activo.png') top left no-repeat;
-			} 
-		}
-		&.done {
-			&:before {
-				background: url('../graphics/layout/feito.png') top left no-repeat;
-			} 
-		}
-	}
-}
