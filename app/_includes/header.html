@@ -2,13 +2,8 @@
 	<nav class="page-nav container-wrapper">
 		<h1 id="page-logo"><a href="/">Violoncelando com a Maria e a Margarida</a></h1>
 		<ul class="primary-nav">
-<<<<<<< HEAD
-			<li><a href="/sessoes" class="{% if page.id == 'sessoes' %}active{% endif %}">Sessões</a></li>
-			<li><a href="/sobre" class="{% if page.id == 'sobre' %}active{% endif %}">Sobre</a></li>
-=======
-			<li><a href="{{site.baseurl}}/sessoes">Sessões</a></li>
-			<li><a href="{{site.baseurl}}/sobre">Sobre</a></li>
->>>>>>> develop
+			<li class="{% if page.id == 'sessoes' %}active{% endif %}"><a href="{{site.baseurl}}/sessoes">Sessões</a></li>
+			<li class="{% if page.id == 'sobre' %}active{% endif %}"><a href="{{site.baseurl}}/sobre" >Sobre</a></li>
 		</ul>
 	</nav>
 </header>
