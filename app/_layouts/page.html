@@ -1,0 +1,126 @@
+---
+layout: base
+---
+
+<div id="scroll-wrap" class="container">
+      
+      <div class="main">
+        <div id="bookshelf" class="bookshelf">
+          <figure>
+            <div class="book" data-book="book-1"></div>
+            <div class="buttons"><a href="#">Capítulo 1</a><a href="#"></a></div>
+            <figcaption><h2>Introdução ao Violoncelo <span>Capítulo 1</span></h2></figcaption>
+            <div class="details">
+            </div>
+          </figure>
+        </div>
+      </div><!-- /main -->
+      
+    </div><!-- /container -->
+
+    <!-- Fullscreen BookBlock -->
+    <div class="bb-custom-wrapper" id="book-1">
+      <div class="bb-bookblock">
+
+        {% assign posts = site.livro | where: "capitulo",page.capitulo  %}
+        {% for post in posts %}
+        <div class="bb-item">
+          <div class="bb-custom-side page-layout-1">
+            <div class="chapter-nav">
+              <span>{{post.capitulo}}</span>
+                {% assign prevPg = null %}
+                <ul>
+                {% for post_ in posts %}
+                  {% unless prevPg == post_.pagina %}
+                    <li>{{post_.pagina}}</li>
+                    {% assign prevPg = post_.pagina %}
+                  {% endunless %}
+                {% endfor %}
+                </ul>
+            </div>
+          </div>
+          <div class="bb-custom-side page-layout-1">
+            <h3>{{post.title}}</h3>
+            {{post.content | markdownify}}
+          </div>
+        </div>
+        {% endfor %}
+        
+      </div><!-- /bb-bookblock -->
+      <nav>
+        <a href="#" class="bb-nav-prev">Previous</a>
+        <a href="#" class="bb-nav-next">Next</a>
+        <a href="#" class="bb-nav-close">Close</a>
+      </nav>
+    </div><!-- /bb-custom-wrapper -->
+
+  </div><!-- /bb-custom-wrapper -->
+
+
+
+
+
+
+
+<div>
+  <h2>{{page.sessao}}</h2>
+  <ul>
+  {% assign prevCap = null %}
+  {% for post in site.sessoes %}
+
+    {% if post.sessao == page.sessao %}
+      {% unless prevCap == post.capitulo %}
+        <li>{{post.capitulo}}{% if post.capitulo == page.capitulo %} - active{% endif %}</li>
+        {% assign prevCap = post.capitulo %}
+      {% endunless %}
+    {% endif %}
+
+  {% endfor %}
+  <hr/>
+  </ul>
+</div>
+
+<!-- START pager -->
+{% assign prevPost = null %}
+{% assign nextPost = null %}
+{% assign currentFound = false %}
+
+{% for post in site.sessoes %}
+
+  {% if post.url == page.url %}
+    {% assign currentFound = true %}
+
+  {% elsif currentFound == false and post.hidden != true %}
+    {% assign prevPost = post %}
+
+  {% elsif currentFound == true and post.hidden != true %}
+    {% assign nextPost = post %}
+    {% break %}
+  {% endif %}
+
+{% endfor %}
+
+
+  <h2>{{page.title}}</h2>
+
+{{content}}
+
+
+<ul class="page-pager">
+  <li>
+    {% if prevPost %}
+    <a href="{{site.baseurl}}{{prevPost.url}}" title="View previous" class="bttn-pager prev" data-pager-prev><span>Prev</span></a>
+    {% else %}
+    <a href="#" title="View previous" class="bttn-pager prev disabled" data-pager-prev><span>Prev</span></a>
+    {% endif %}
+  </li>
+  <li>
+    {% if nextPost %}
+    <a href="{{site.baseurl}}{{nextPost.url}}" title="View next" class="bttn-pager next" data-pager-next><span>Next</span></a>
+    {% else %}
+    <a href="#" title="View next" class="bttn-pager next disabled" data-pager-next><span>Next</span></a>
+    {% endif %}
+  </li>
+</ul>
+<!-- END pager -->
+
