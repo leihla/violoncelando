@@ -1,3 +1,4 @@
+/* eslint-disable */
 /**
  * bookshelf.js v1.0.0
  * http://www.codrops.com
@@ -44,6 +45,19 @@
 			this._initBookBlock();
 		}
 		this._initEvents();
+
+		// Init nav.
+		var bookId = this.el.querySelector('[data-book]').getAttribute('data-book');
+		var bookNav = document.querySelectorAll( '#' + bookId + ' [data-hook="book-nav"]' );
+
+		var self = this;
+		[].slice.call( bookNav ).forEach( function( navEl ) {
+			navEl.addEventListener('click', function (e) {
+				e.preventDefault();
+				var pg = navEl.getAttribute('data-page');
+				self.bb.jump(pg);
+			});
+		} );
 	}
 
 	Book.prototype._layout = function() {
@@ -90,7 +104,9 @@
 
 	Book.prototype._open = function() {
 		docscroll = scrollY();
-		
+
+		classie.remove( this.el, 'close' );
+		classie.remove( this.bbWrapper, 'hide' );
 		classie.add( this.el, 'open' );
 		classie.add( this.bbWrapper, 'show' );
 
