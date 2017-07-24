@@ -228,7 +228,7 @@ gulp.task('html', function () {
   return gulp.src('_site/**/*.html')
     .pipe($.useref({searchPath: ['.tmp', 'app', '.']}))
     .pipe($.if('*.js', $.uglify()))
-    .pipe($.if('*.css', $.csso()))
+//    .pipe($.if('*.css', $.csso()))
     .pipe($.if(/\.(css|js)$/, rev()))
     .pipe(revReplace({prefix: jkConf.baseurl}))
     .pipe(gulp.dest('_site'));
